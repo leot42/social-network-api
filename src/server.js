@@ -18,6 +18,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkDb
 mongoose.set('useCreateIndex', true);
 mongoose.set('debug', true);
 
+app.use(require('./routes'));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
